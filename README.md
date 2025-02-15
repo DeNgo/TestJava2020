@@ -10,15 +10,15 @@ En la página de índice encontrarás enlaces a los distintos ejemplos de consul
 
 ## 📋 Ejemplos de consulta
 
-[Consulta 1](http://localhost:8080/api/prices?applicationDate=2020-06-14-10.00.00&productId=35455&brandId=1)
+Consulta 1 http://localhost:8080/api/prices?applicationDate=2020-06-14-10.00.00&productId=35455&brandId=1
 
-[Consulta 2](http://localhost:8080/api/prices?applicationDate=2020-06-14-16.00.00&productId=35455&brandId=1)
+Consulta 2 http://localhost:8080/api/prices?applicationDate=2020-06-14-16.00.00&productId=35455&brandId=1)
 
-[Consulta 3](http://localhost:8080/api/prices?applicationDate=2020-06-14-21.00.00&productId=35455&brandId=1)
+Consulta 3 http://localhost:8080/api/prices?applicationDate=2020-06-14-21.00.00&productId=35455&brandId=1
 
-[Consulta 4](http://localhost:8080/api/prices?applicationDate=2020-06-15-10.00.00&productId=35455&brandId=1)
+Consulta 4 http://localhost:8080/api/prices?applicationDate=2020-06-15-10.00.00&productId=35455&brandId=1
 
-[Consulta 5](http://localhost:8080/api/prices?applicationDate=2020-06-16-21.00.00&productId=35455&brandId=1)
+Consulta 5 http://localhost:8080/api/prices?applicationDate=2020-06-16-21.00.00&productId=35455&brandId=1
 
 ## 📄 Respuesta esperada
 
