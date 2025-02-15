@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Service API</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    h1 { color: #333; }
+    p { color: #555; }
+    .example { background-color: #f4f4f4; padding: 10px; border-radius: 5px; display: inline-block; margin-top: 10px; }
+    a { color: #007bff; text-decoration: none; font-weight: bold; }
+    a:hover { text-decoration: underline; }
+    ul {list-style:none}
+  </style>
+</head>
+<body>
+<h1>Bienvenido a la Price Service API</h1>
+<p>Esta API te permite consultar precios de productos en función de la fecha, el producto y la marca.</p>
+
+<h2>🛠 ¿Cómo usar la API?</h2>
+<p>Realiza una petición GET a <code>/api/prices</code> con los siguientes parámetros:</p>
+
+<div class="example">
+  <p><strong>Ejemplo de URL:</strong></p>
+  <p><a href="/api/prices?applicationDate=2020-06-14-10.00.00&productId=35455&brandId=1" target="_blank">
+    /api/prices?applicationDate=2020-06-14-10.00.00&productId=35455&brandId=1
+  </a></p>
+</div>
+
+<h2>📌 Parámetros</h2>
+<ul>
+  <li><strong>applicationDate</strong>: Fecha y hora de consulta (formato <code>YYYY-MM-DD-HH.MM.SS</code>).</li>
+  <li><strong>productId</strong>: ID del producto.</li>
+  <li><strong>brandId</strong>: ID de la marca.</li>
+</ul>
+
+<h2>📋 Ejemplos de consulta</h2>
+<div class="example">
+  <p><strong>Consulta 1:</strong></p>
+  <p><a href="/api/prices?applicationDate=2020-06-14-16.00.00&productId=35455&brandId=1" target="_blank">
+    /api/prices?applicationDate=2020-06-14-16.00.00&productId=35455&brandId=1
+  </a></p>
+</div>
+
+<div class="example">
+  <p><strong>Consulta 2:</strong></p>
+  <p><a href="/api/prices?applicationDate=2020-06-14-21.00.00&productId=35455&brandId=1" target="_blank">
+    /api/prices?applicationDate=2020-06-14-21.00.00&productId=35455&brandId=1
+  </a></p>
+</div>
+
+<h2>📄 Respuesta esperada</h2>
+<pre>
+{
+  "id": 1,
+  "brandId": 1,
+  "startDate": "2020-06-14T00:00:00",
+  "endDate": "2020-12-31T23:59:59",
+  "priceList": 1,
+  "productId": 35455,
+  "priority": 0,
+  "price": 35.5,
+  "currency": "EUR"
+}
+    </pre>
+
+
+</body>
+</html>
