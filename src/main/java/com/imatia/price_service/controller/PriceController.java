@@ -1,6 +1,6 @@
 package com.imatia.price_service.controller;
 
-import com.imatia.price_service.model.Price;
+import com.imatia.price_service.dto.PriceDTO;
 import com.imatia.price_service.service.PriceService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -23,13 +23,11 @@ public class PriceController {
     public ResponseEntity<?> getPrice(
             @RequestParam("applicationDate")
             @DateTimeFormat(pattern = "yyyy-MM-dd-HH.mm.ss") LocalDateTime applicationDate,
-
             @RequestParam("productId") Long productId,
             @RequestParam("brandId") Integer brandId) {
 
-        Optional<Price> priceOpt = priceService.getApplicablePrice(brandId, productId, applicationDate);
-
-        return priceOpt
+        Optional<PriceDTO> priceDTOOpt = priceService.getApplicablePriceDTO(brandId, productId, applicationDate);
+        return priceDTOOpt
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
